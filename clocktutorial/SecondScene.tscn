@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3kif74uav8ft"]
+
+[node name="SecondScene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 176.0
+offset_right = 488.0
+offset_bottom = 199.0
+text = "Welcome to Scene 2
+"

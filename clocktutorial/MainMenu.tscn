@@ -1,0 +1,217 @@
+[gd_scene load_steps=7 format=3 uid="uid://chvlpx4b4qo7t"]
+
+[ext_resource type="Script" uid="uid://btoeut4otdgx" path="res://MainMenu.gd" id="1_eiy7p"]
+
+[sub_resource type="Gradient" id="Gradient_5rrw5"]
+offsets = PackedFloat32Array(0.98, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_venu5"]
+gradient = SubResource("Gradient_5rrw5")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_kig64"]
+offsets = PackedFloat32Array(0.515723)
+colors = PackedColorArray(0.43197, 0.306649, 0.200997, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4n1wf"]
+gradient = SubResource("Gradient_kig64")
+
+[sub_resource type="GDScript" id="GDScript_i26rj"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	#if(button_pressed)
+	#	print(\"hello world\")
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://MainMenu.tscn\")
+"
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(336, -128)
+script = ExtResource("1_eiy7p")
+
+[node name="Face" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_venu5")
+
+[node name="Hour1" type="Polygon2D" parent="Face"]
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 0, -208)
+
+[node name="Hour2" type="Polygon2D" parent="Face"]
+rotation = 0.523599
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour3" type="Polygon2D" parent="Face"]
+rotation = 1.0472
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour4" type="Polygon2D" parent="Face"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour5" type="Polygon2D" parent="Face"]
+rotation = 2.0944
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour6" type="Polygon2D" parent="Face"]
+rotation = 2.61799
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour7" type="Polygon2D" parent="Face"]
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour8" type="Polygon2D" parent="Face"]
+rotation = 3.66519
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour9" type="Polygon2D" parent="Face"]
+rotation = 4.18879
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour10" type="Polygon2D" parent="Face"]
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour11" type="Polygon2D" parent="Face"]
+rotation = 5.23599
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="Hour12" type="Polygon2D" parent="Face"]
+rotation = 5.75959
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -240, 16, -240, 16, -240, 0, -208)
+
+[node name="HourArm" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, 16, 8, 16, 8, -40, 0, -64, -8, -40)
+
+[node name="MinuteArm" type="Polygon2D" parent="."]
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(-8, 16, 8, 16, 8, -40, 0, -64, -8, -40)
+
+[node name="SecondArm" type="Polygon2D" parent="."]
+color = Color(0.794399, 3.22476e-06, 9.62615e-07, 1)
+polygon = PackedVector2Array(-8, 16, 8, 16, 8, -40, 1, -94, -8, -40)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(-96, 488)
+scale = Vector2(7.5, 11.25)
+texture = SubResource("GradientTexture2D_4n1wf")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 608.0
+offset_top = 504.0
+offset_right = 811.0
+offset_bottom = 535.0
+text = "Click Me to switch scenes"
+script = SubResource("GDScript_i26rj")
+
+[node name="LineEditHour" type="LineEdit" parent="."]
+offset_left = -72.0
+offset_top = 264.0
+offset_right = 80.0
+offset_bottom = 304.0
+
+[node name="LineEditminute" type="LineEdit" parent="."]
+offset_left = -72.0
+offset_top = 312.0
+offset_right = 80.0
+offset_bottom = 352.0
+
+[node name="LineEditAMPM" type="LineEdit" parent="."]
+offset_left = -72.0
+offset_top = 368.0
+offset_right = 80.0
+offset_bottom = 408.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -200.0
+offset_top = 288.0
+offset_right = 16.0
+offset_bottom = 472.0
+
+[node name="Instructions" type="TextEdit" parent="."]
+offset_left = -208.0
+offset_top = 184.0
+offset_right = 24.0
+offset_bottom = 256.0
+text = "Please insert below what 
+meal options you would like"
+editable = false
+
+[node name="InstructionsHour" type="TextEdit" parent="."]
+offset_left = -256.0
+offset_top = 264.0
+offset_right = -136.0
+offset_bottom = 304.0
+text = "Hour of meal:"
+editable = false
+
+[node name="InstructionsMinute" type="TextEdit" parent="."]
+offset_left = -264.0
+offset_top = 312.0
+offset_right = -128.0
+offset_bottom = 352.0
+text = "Minute of meal:"
+editable = false
+
+[node name="InstructionsAMorPM" type="TextEdit" parent="."]
+offset_left = -280.0
+offset_top = 360.0
+offset_right = -120.0
+offset_bottom = 424.0
+text = "In the morning or 
+evening (AM or PM)"
+editable = false
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = -208.0
+offset_top = 464.0
+offset_right = -5.0
+offset_bottom = 518.0
+text = "Once all are writen and 
+submitted, click here!"
+script = SubResource("GDScript_i26rj")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="SubmitButton" method="_on_pressed"]
