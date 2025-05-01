@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cvsmflunfybfo"]
+[gd_scene load_steps=2 format=3 uid="uid://cvsmflunfybfo"]
+
+[ext_resource type="Script" uid="uid://bjqeislk01ajp" path="res://Kitchen.gd" id="1_vloss"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vloss")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -18,3 +21,57 @@ color = Color(1, 1, 0.627451, 1)
 layout_mode = 0
 offset_right = 1065.0
 offset_bottom = 1922.0
+
+[node name="MealsContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 210.0
+offset_right = 850.0
+offset_bottom = 1610.0
+
+[node name="AddMealButton" type="Button" parent="MealsContainer"]
+layout_mode = 2
+text = "Add Meal"
+
+[node name="MealDialog" type="AcceptDialog" parent="."]
+title = "Add Meal"
+initial_position = 1
+size = Vector2i(800, 1000)
+
+[node name="Content" type="VBoxContainer" parent="MealDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 792.0
+offset_bottom = 951.0
+
+[node name="NameRow" type="HBoxContainer" parent="MealDialog/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MealDialog/Content/NameRow"]
+layout_mode = 2
+text = "Name"
+
+[node name="name_edit" type="LineEdit" parent="MealDialog/Content/NameRow"]
+layout_mode = 2
+
+[node name="TimeRow" type="HBoxContainer" parent="MealDialog/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MealDialog/Content/TimeRow"]
+layout_mode = 2
+text = "Time"
+
+[node name="hour_spin" type="SpinBox" parent="MealDialog/Content/TimeRow"]
+layout_mode = 2
+max_value = 23.0
+
+[node name="Label2" type="Label" parent="MealDialog/Content/TimeRow"]
+layout_mode = 2
+text = ":"
+
+[node name="min_spin" type="SpinBox" parent="MealDialog/Content/TimeRow"]
+layout_mode = 2
+max_value = 59.0
+
+[node name="notes_edit" type="TextEdit" parent="MealDialog/Content"]
+layout_mode = 2

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://wlp01jqmvlhf"]
+
+[ext_resource type="Script" uid="uid://c4g04iuq8p22q" path="res://meal_item.gd" id="1_sunvg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sunvg"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mxviq"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sunvg")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_sunvg")
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_mxviq")
+
+[node name="EditButton" type="Button" parent="."]
+layout_mode = 2
+text = "[Edit]"
+
+[node name="FeedButton" type="Button" parent="."]
+layout_mode = 2
+text = "[Feed]"
