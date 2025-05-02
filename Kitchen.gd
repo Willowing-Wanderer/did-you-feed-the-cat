@@ -40,6 +40,7 @@ func _on_meal_dialog_confirmed():
 		item.set_data(mName, mHour, mMinute, mNotes)
 		item.edit_requested.connect(_on_item_edit_requested)
 		item.feed_requested.connect(_on_item_feed_requested)
+		item.delete_requested.connect(_on_item_delete_requested)
 	modal.hide()
 
 func _on_item_edit_requested(item: MealItem):
@@ -53,3 +54,7 @@ func _on_item_edit_requested(item: MealItem):
 
 func _on_item_feed_requested(item: MealItem):
 	print("Feeding cats at meal: %s at %02d:%02d" % [item.meal_name, item.hour, item.min])
+
+func _on_item_delete_requested(item: MealItem):
+	meals_container.remove_child(item)
+	item.queue_free()

@@ -28,3 +28,7 @@ text = "[Edit]"
 [node name="FeedButton" type="Button" parent="."]
 layout_mode = 2
 text = "[Feed]"
+
+[node name="DeleteButton" type="Button" parent="."]
+layout_mode = 2
+text = "[Delete]"

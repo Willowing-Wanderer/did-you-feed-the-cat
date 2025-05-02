@@ -3,6 +3,7 @@ class_name MealItem
 
 signal edit_requested(item)
 signal feed_requested(item)
+signal delete_requested(item)
 
 @export var meal_name : String = ""
 @export var hour      : int    = 12
@@ -13,17 +14,22 @@ signal feed_requested(item)
 @onready var time_lbl = $TimeLabel
 @onready var edit_btn = $EditButton
 @onready var feed_btn = $FeedButton
+@onready var delete_btn = $DeleteButton
 
 func _ready():
 	_update_labels()
 	edit_btn.pressed.connect(_on_edit_btn_pressed)
 	feed_btn.pressed.connect(_on_feed_btn_pressed)
+	delete_btn.pressed.connect(_on_delete_btn_pressed)
 
 func _on_edit_btn_pressed():
 	emit_signal("edit_requested", self)
 
 func _on_feed_btn_pressed():
 	emit_signal("feed_requested", self)
+	
+func _on_delete_btn_pressed():
+	emit_signal("delete_requested",self)
 
 func _update_labels():
 	name_lbl.text = meal_name
