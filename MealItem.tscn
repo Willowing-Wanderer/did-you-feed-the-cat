@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://wlp01jqmvlhf"]
+[gd_scene load_steps=7 format=3 uid="uid://wlp01jqmvlhf"]
 
 [ext_resource type="Script" uid="uid://c4g04iuq8p22q" path="res://meal_item.gd" id="1_sunvg"]
+[ext_resource type="Texture2D" uid="uid://bmalx4ryvwi41" path="res://clock_icon.png" id="2_mxr6u"]
+[ext_resource type="Texture2D" uid="uid://bo4kd4aqnsu3c" path="res://exc_icon.png" id="3_6s84x"]
+[ext_resource type="Texture2D" uid="uid://csbjxgx6jsb45" path="res://check_icon.png" id="4_eihed"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sunvg"]
 font_color = Color(0, 0, 0, 1)
@@ -12,6 +15,14 @@ font_color = Color(0, 0, 0, 1)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_sunvg")
+clock_icon = ExtResource("2_mxr6u")
+warning_icon = ExtResource("3_6s84x")
+fed_icon = ExtResource("4_eihed")
+
+[node name="StatusIcon" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
 
 [node name="NameLabel" type="Label" parent="."]
 layout_mode = 2
